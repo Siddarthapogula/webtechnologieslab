@@ -10,6 +10,10 @@ app.use(bodyParser.json());
 let todos = [];
 let currentId = 1;
 
+app.get('/', (req, res) => {
+    res.send('Hello World!');
+})
+
 // Create a todo
 app.post('/todos', (req, res) => {
     const { task } = req.body;
